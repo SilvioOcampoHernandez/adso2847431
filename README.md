@@ -3,7 +3,7 @@
 ### Centro de p\Procesos Industriales y Construccion
 ____
 
-![cratos](https://tinyurl.com/yjj4hdba)
+[cratos](https://tinyurl.com/yjj4hdba)
 
 | #   |Topic         | Description      |
 |---  |----          | ------           | 
