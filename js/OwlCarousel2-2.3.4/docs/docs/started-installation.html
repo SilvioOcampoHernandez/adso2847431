@@ -9,7 +9,7 @@
     <meta name="description" content="Owl Carousel Documentation">
     <meta name="author" content="David Deutsch">
     <title>
-      Classes | Owl Carousel | 2.3.4
+      Installation | Owl Carousel | 2.3.4
     </title>
 
     <!-- Stylesheets -->
@@ -73,7 +73,7 @@
     <section class="title">
       <div class="row">
         <div class="large-12 columns">
-          <h1>API</h1>
+          <h1>Getting Started</h1>
         </div>
       </div>
     </section>
@@ -108,100 +108,46 @@
         </div>
         <div class="small-12 medium-9 large-9 columns">
           <article class="docs-content">
-            <h2 id="classes">Classes</h2>
-            <p>This is an example of how html is rendered. With the following options you can change almost every class the way you want</p>
-            <pre><code>&lt;div class=&quot;owl-carousel owl-theme owl-loaded&quot;&gt;
-    &lt;div class=&quot;owl-stage-outer&quot;&gt;
-        &lt;div class=&quot;owl-stage&quot;&gt;
-            &lt;div class=&quot;owl-item&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;owl-item&quot;&gt;...&lt;/div&gt;
-            &lt;div class=&quot;owl-item&quot;&gt;...&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;owl-nav&quot;&gt;
-        &lt;div class=&quot;owl-prev&quot;&gt;prev&lt;/div&gt;
-        &lt;div class=&quot;owl-next&quot;&gt;next&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;owl-dots&quot;&gt;
-        &lt;div class=&quot;owl-dot active&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;owl-dot&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;owl-dot&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;/div&gt;
+            <h2 id="installation">Installation</h2>
+            <hr>
+            <h3 id="include-css">Include CSS</h3>
+            <p>First, include two CSS files into your HTML head:</p>
+            <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;owlcarousel/owl.carousel.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;owlcarousel/owl.theme.default.min.css&quot;&gt;</code></pre>
+            <blockquote>
+              <p><code>owl.carousel.css</code> file is required and should be included before any *.js files.</p>
+            </blockquote>
+            <p>Second <code>owl.theme.default.css</code> file is optional and feel free to edit it. However, it is required if you&#39;d like the default nav controls like dots or next buttons. Inside the source package you can also find
+              <a href="http://sass-lang.com/">SCSS</a>  files for easy generation of your own themes.</p>
+            <h3 id="include-js">Include JS</h3>
+            <p>Yep, include jQuery and <code>owl.carousel.min.js</code> into the footer.</p>
+            <pre><code>&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;owlcarousel/owl.carousel.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+            <h3 id="set-html">Set HTML</h3>
+            <p>You don&#39;t need any special markup. All you need is to wrap your divs(owl works with any type element a/img/span..) inside the container element <code>&lt;div class=&quot;owl-carousel&quot;&gt;</code>. Class &quot;owl-carousel&quot; is
+              mandatory to apply proper styles that come from owl.carousel.css file. If you want the default nav controls like dots or buttons, you must also include the &quot;owl-theme&quot; class on that same div.</p>
+            <pre><code>&lt;!-- Set up your HTML --&gt;
+&lt;div class=&quot;owl-carousel&quot;&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            <h3 id="options">Options</h3>
-            <h4 id="refreshclass">refreshClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-refresh</code></p>
-            <p>Class during refresh.</p>
-            <hr>
-            <h4 id="loadingclass">loadingClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-loading</code></p>
-            <p>Class during load.</p>
-            <hr>
-            <h4 id="loadedclass">loadedClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-loaded</code></p>
-            <p>Class after load.</p>
-            <hr>
-            <h4 id="rtlclass">rtlClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-rtl</code></p>
-            <p>Class for right to left mode.</p>
-            <hr>
-            <h4 id="dragclass">dragClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-drag</code></p>
-            <p>Class for mouse drag mode.</p>
-            <hr>
-            <h4 id="grabclass">grabClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-grab</code></p>
-            <p>Class during mouse drag.</p>
-            <hr>
-            <h4 id="stageclass">stageClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-stage</code></p>
-            <p>Stage class.</p>
-            <hr>
-            <h4 id="stageouterclass">stageOuterClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-stage-outer</code></p>
-            <p>Stage outer class.</p>
-            <hr>
-            <h4 id="navcontainerclass">navContainerClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-nav</code></p>
-            <p>Navigation container class.</p>
-            <hr>
-            <h4 id="navclass">navClass</h4>
-            <p>Type: <code>Array</code>
-              <br /> Default: <code>[&amp;#x27;owl-prev&amp;#x27;,&amp;#x27;owl-next&amp;#x27;]</code></p>
-            <p>Navigation buttons classes.</p>
-            <hr>
-            <h4 id="dotclass">dotClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-dot</code></p>
-            <p>Dot Class.</p>
-            <hr>
-            <h4 id="dotsclass">dotsClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-dots</code></p>
-            <p>Dots container class.</p>
-            <hr>
-            <h4 id="autoheightclass">autoHeightClass</h4>
-            <p>Type: <code>String</code>
-              <br /> Default: <code>owl-height</code></p>
-            <p>Auto height class.</p>
-            <hr>
-            <h4 id="responsiveclass">responsiveClass</h4>
-            <p>Type: <code>String|Boolean</code>
-              <br /> Default: <code>false</code></p>
-            <p>Optional helper class. Add &#x27;&lt;responsiveClass&gt;-&lt;breakpoint&gt;&#x27; class to main element. Can be used to stylize content on given breakpoint.</p>
-            <hr>
+            <h3 id="call-the-plugin">Call the plugin</h3>
+            <p>Now call the Owl initializer function and your carousel is ready.</p>
+            <pre><code>$(document).ready(function(){
+  $(&quot;.owl-carousel&quot;).owlCarousel();
+});</code></pre>
+            <blockquote>
+              <p>See
+                <a href="/OwlCarousel2/demos/demos.html">demos</a>  for customisation and options usage.</p>
+            </blockquote>
             <h3 id="next-step">Next Step</h3>
-            <h4 id="-events-api-events-html-">
-              <a href="api-events.html">Events</a> 
+            <h4 id="-faq-started-faq-html-">
+              <a href="started-faq.html">FAQ</a> 
             </h4>
           </article>
         </div>
